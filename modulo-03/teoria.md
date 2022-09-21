@@ -25,4 +25,28 @@
 ### Bind Mount Volume
 
 -  Também é um volume porém ele fica em um  diretorio que nós especificamos
--  
+-  Sera necessario pemisão para acessar diretorios fora do docker
+-  Atualização em tempo real  com o bind mount
+    [x] Adicionando a pasta do projeto sincronizando com o volume do docker
+    temos um hot reload
+    [X] home/meu-diretorio/projeto:var/diretorio-container/projeto
+
+### Criar um volume
+
+- docker volume create <nome>
+- docker listagem de volumes 'docker ls'
+- bind moun não é considerado um volume para o docker
+
+### Inpecionando Volumes
+
+- docker volume inspect <nome>
+
+### Remover um volume
+- docker volume rm <nome>
+
+## Remover volumes nao utilizados
+- docker volume prune
+
+## Volumes apenas de leitura
+- docker run -v volume:/data:ro
+- ro readonly -> somente de leitura
